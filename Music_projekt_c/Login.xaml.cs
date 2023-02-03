@@ -36,12 +36,23 @@ namespace Music_projekt_c
 
             if (x == true)
             {
+                OrdinacijeWindow ordinacijeWin = new OrdinacijeWindow(username);
+                ordinacijeWin.Show();
+                this.Close();
+
                 MessageBox.Show("Prijava uspešna");
             }
             else
             {
                 MessageBox.Show("Napaka pri prijavi");
             }
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            MainWindow mainWin = new MainWindow();
+            mainWin.Show();
+            this.Close();
         }
     }
 }

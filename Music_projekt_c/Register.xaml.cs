@@ -32,6 +32,11 @@ namespace Music_projekt_c
                     if (SQL_code.freeUsername(username) == true)
                     {
                         SQL_code.Register(username, passHash);
+
+                        OrdinacijeWindow ordinacijeWin = new OrdinacijeWindow(username);
+                        ordinacijeWin.Show();
+                        this.Close();
+
                         MessageBox.Show("Registracija uspešna");
                     }
                     else
@@ -44,6 +49,13 @@ namespace Music_projekt_c
                     MessageBox.Show("Gesli se ne ujemata");
                 }
             }
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            MainWindow mainWin = new MainWindow();
+            mainWin.Show();
+            this.Close();
         }
     }
 }

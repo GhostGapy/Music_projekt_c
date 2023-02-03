@@ -1,0 +1,19 @@
+﻿<Window x:Class="Music_projekt_c.OrdinacijeWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Music_projekt_c"
+        mc:Ignorable="d"
+        Title="OrdinacijeWindow" Height="450" Width="800">
+    <Grid>
+        <ScrollViewer Margin="10,41,10,41">
+            <DataGrid Width="660">
+                Test
+            </DataGrid>
+        </ScrollViewer>
+        <Label x:Name="username_label" Content="Prijavljeni ste kot: _____________________" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="200"/>
+        <Button Content="Odjava" HorizontalAlignment="Right" Margin="0,10,10,0" VerticalAlignment="Top" Width="79" Height="26" Click="Button_Click"/>
+
+    </Grid>
+</Window>
