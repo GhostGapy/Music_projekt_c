@@ -33,6 +33,9 @@ namespace Music_projekt_c
                     {
                         SQL_code.Register(username, passHash);
                         MessageBox.Show("Registracija uspešna");
+                        MainWindow mainWin = new MainWindow();
+                        mainWin.Show();
+                        this.Close();
                     }
                     else
                     {
@@ -44,6 +47,13 @@ namespace Music_projekt_c
                     MessageBox.Show("Gesli se ne ujemata");
                 }
             }
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            MainWindow mainWin = new MainWindow();
+            mainWin.Show();
+            this.Close();
         }
     }
 }

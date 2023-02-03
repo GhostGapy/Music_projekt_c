@@ -8,8 +8,9 @@
         Title="Register" Height="450" Width="420">
     <Grid>
         <TextBox x:Name="username_box" HorizontalAlignment="Left" Margin="55,59,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="55,197,0,0" VerticalAlignment="Top" Click="Button_Click"/>
+        <Button Content="Registreraj" HorizontalAlignment="Left" Margin="55,197,0,0" VerticalAlignment="Top" Click="Button_Click"/>
         <PasswordBox x:Name="password1_box" HorizontalAlignment="Left" Margin="55,99,0,0" VerticalAlignment="Top" Width="120"/>
         <PasswordBox x:Name="password2_box" HorizontalAlignment="Left" Margin="55,134,0,0" VerticalAlignment="Top" Width="120"/>
+        <Button Content="Nazaj" HorizontalAlignment="Left" Margin="176,192,0,0" VerticalAlignment="Top" Click="Button_Click_1"/>
     </Grid>
 </Window>
