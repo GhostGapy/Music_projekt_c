@@ -10,33 +10,38 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Security.Cryptography;
 
 namespace Music_projekt_c
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for Login.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Login : Window
     {
-        public MainWindow()
+        public Login()
         {
             InitializeComponent();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Login loginWin = new Login();
-            loginWin.Show();
-            this.Close();
-        }
+            string username = username_box.Text;
+            string password = password_box.Password;
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-            Register registerWin = new Register();
-            registerWin.Show();
-            this.Close();
+            string passHash = hash.GetHashString(password);
+
+            bool x = SQL_code.Login(username, passHash);
+
+            if (x == true)
+            {
+                MessageBox.Show("Prijava uspešna");
+            }
+            else
+            {
+                MessageBox.Show("Napaka pri prijavi");
+            }
         }
     }
 }
